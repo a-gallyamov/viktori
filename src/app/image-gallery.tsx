@@ -10,6 +10,8 @@ import 'yet-another-react-lightbox/plugins/captions.css'
 import 'yet-another-react-lightbox/plugins/counter.css'
 import styles from './image-gallery.module.css'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 type Image = {
   src: string
   alt: string
@@ -20,7 +22,7 @@ export function ImageGallery({ images }: { images: Image[] }) {
   const [index, setIndex] = useState(0)
 
   const slides = images.map((img) => ({
-    src: img.src,
+    src: basePath + img.src,
     alt: img.alt,
     description: img.alt,
   }))
@@ -33,7 +35,7 @@ export function ImageGallery({ images }: { images: Image[] }) {
       <div className={styles.preview}>
         <button className={`${styles.btn} ${styles.btnPrev}`} onClick={prev} aria-label="Назад">&#8249;</button>
         <img
-          src={images[index].src}
+          src={basePath + images[index].src}
           alt={images[index].alt}
           className={styles.previewImg}
           onClick={() => setOpen(true)}
