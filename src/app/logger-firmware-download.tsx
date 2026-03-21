@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import styles from './logger-firmware-download.module.css'
-import firmware from '../../public/logger-firmware.json'
+import firmware from '../../public/downloads/logi/logi-firmware.json'
 
 type FirmwareEntry = {
   label: string
@@ -37,7 +37,7 @@ export function LoggerFirmwareDownload() {
       <div className={styles.version}>Версия прошивки логгера: <strong>{firmware.version}</strong></div>
       <div className={styles.buttons} ref={ref}>
         <a
-          href={`${basePath}/downloads/logger/${firmware.web}`}
+          href={`${basePath}/downloads/logi/${firmware.web}`}
           download
           className={styles.btn}
         >
@@ -56,7 +56,7 @@ export function LoggerFirmwareDownload() {
               {firmwares.map((fw) => (
                 <a
                   key={fw.file}
-                  href={`${basePath}/downloads/logger/${fw.file}`}
+                  href={`${basePath}/downloads/logi/${fw.file}`}
                   download
                   className={styles.item}
                   onClick={() => setOpen(false)}

@@ -1,7 +1,7 @@
 'use client'
 
 import { FirmwareDropdown } from './firmware-dropdown'
-import firmware from '../../public/firmware.json'
+import firmware from '../../public/downloads/charger/firmware.json'
 
 export function FirmwareDownload() {
   return (

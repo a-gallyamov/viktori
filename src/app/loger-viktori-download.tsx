@@ -1,7 +1,7 @@
 'use client'
 
 import { FirmwareDropdown } from './firmware-dropdown'
-import firmware from '../../public/loger-viktori-firmware.json'
+import firmware from '../../public/downloads/loger/loger-viktori-firmware.json'
 
 export function LogerViktoriDownload() {
   return (

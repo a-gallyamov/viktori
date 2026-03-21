@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './page.module.css'
 import { FirmwareDropdown } from './firmware-dropdown'
-import firmware from '../../public/firmware.json'
+import firmware from '../../public/downloads/charger/firmware.json'
 
 const features = [
   { title: 'Open Source', desc: 'Открытая схема и прошивка на Arduino (ATmega328P, LGT8F328P)' },
