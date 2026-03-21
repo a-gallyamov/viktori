@@ -1,4 +1,4 @@
-import { Layout, Navbar } from 'nextra-theme-docs'
+import { Layout, Navbar, ThemeSwitch } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { SearchRu } from './search-ru'
@@ -21,7 +21,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   const navbar = (
     <Navbar
       logo={<b>ViktoRi</b>}
-    />
+    >
+      <ThemeSwitch lite className="theme-switch" />
+    </Navbar>
   )
   const pageMap = await getPageMap()
   return (
